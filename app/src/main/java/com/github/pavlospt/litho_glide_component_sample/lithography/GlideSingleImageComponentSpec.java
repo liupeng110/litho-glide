@@ -15,10 +15,7 @@ public class GlideSingleImageComponentSpec {
   protected static final float imageAspectRatio = 1f;
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
-      ComponentContext c,
-      @Prop String image,
-      @Prop(optional = true) float imageAspectRatio) {
+  static ComponentLayout onCreateLayout(ComponentContext c,@Prop String image,@Prop(optional = true) float imageAspectRatio) {
     return GlideImage.create(c)
         .imageUrl(image)
         .aspectRatio(imageAspectRatio)

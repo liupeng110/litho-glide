@@ -21,8 +21,7 @@ import com.facebook.yoga.YogaAlign;
 import static com.facebook.yoga.YogaEdge.HORIZONTAL;
 import static com.facebook.yoga.YogaEdge.VERTICAL;
 
-@LayoutSpec
-public class FeedItemCardSpec {
+@LayoutSpec public class FeedItemCardSpec {
 
   @OnCreateLayout
   static ComponentLayout onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist, @Prop final RecyclerBinder binder) {
@@ -32,7 +31,7 @@ public class FeedItemCardSpec {
         .paddingDip(VERTICAL, 8)
         .paddingDip(HORIZONTAL, 16)
         .child(Card.create(c)
-            .content(FeedItemComponent.create(c).artist(artist).binder(binder)))
+       .content(FeedItemComponent.create(c).artist(artist).binder(binder)))
         .build();
   }
 }

@@ -33,9 +33,7 @@ import static android.R.drawable.star_off;
 public class FavouriteButtonSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
-      ComponentContext c,
-      @State boolean favourited) {
+  static ComponentLayout onCreateLayout(ComponentContext c,@State boolean favourited) {
     return Row.create(c)
         .backgroundRes(favourited ? star_on : star_off)
         .widthDip(32)
@@ -50,9 +48,7 @@ public class FavouriteButtonSpec {
   }
 
   @OnEvent(ClickEvent.class)
-  static void onClick(
-      ComponentContext c,
-      @FromEvent View view) {
+  static void onClick(ComponentContext c,@FromEvent View view) {
     FavouriteButton.toggleFavourited(c);
   }
 }

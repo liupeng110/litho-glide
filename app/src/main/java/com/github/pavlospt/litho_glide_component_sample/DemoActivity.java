@@ -23,9 +23,8 @@ public class DemoActivity extends AppCompatActivity {
 
     final String demoName = (String) getIntent().getSerializableExtra("demoName");
 
-    setContentView(
-        LithoView.create(
-            this,
-            Demos.getComponent(demoName)));
+    setContentView(LithoView.create( this, Demos.getComponent(demoName)));
   }
+
+
 }

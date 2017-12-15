@@ -33,24 +33,16 @@ public class DemoListItemComponentSpec {
 
   @OnCreateLayout
   static ComponentLayout onCreateLayout(
-      ComponentContext c,
-      @Prop final String name) {
+      ComponentContext c,@Prop final String name) {
     return Column.create(c).flexShrink(0).alignContent(YogaAlign.FLEX_START)
         .paddingDip(ALL, 16)
-        .child(
-            Text.create(c)
-                .text(name)
-                .textSizeSp(18)
-                .build())
+        .child(Text.create(c).text(name).textSizeDip(18).build())
         .clickHandler(DemoListItemComponent.onClick(c))
         .build();
   }
 
   @OnEvent(ClickEvent.class)
-  static void onClick(
-      ComponentContext c,
-      @FromEvent View view,
-      @Prop final String name) {
+  static void onClick(ComponentContext c,@FromEvent View view,@Prop final String name) {
     final Intent intent = new Intent(c, DemoActivity.class);
     intent.putExtra("demoName", name);
     c.startActivity(intent);

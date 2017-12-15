@@ -22,15 +22,15 @@ import com.facebook.litho.widget.RecyclerBinder;
   private static final String MAIN_SCREEN = "main_screen";
 
   @OnCreateLayout static ComponentLayout onCreateLayout(ComponentContext c) {
-    final RecyclerBinder recyclerBinder = new RecyclerBinder.Builder().layoutInfo(
-        new LinearLayoutInfo(c, OrientationHelper.VERTICAL, false)).build(c);
+    final RecyclerBinder recyclerBinder = new RecyclerBinder.Builder().layoutInfo
+            (new LinearLayoutInfo(c, OrientationHelper.VERTICAL, false)).build(c);
 
-    Demos.addAllToBinder(recyclerBinder, c);
+    Demos.addAllToBinder(recyclerBinder, c);//？？？
 
     return Recycler.create(c)
-        .binder(recyclerBinder)
-        .flexShrink(0)
-        .testKey(MAIN_SCREEN)
-        .buildWithLayout();
+            .binder(recyclerBinder)
+            .flexShrink(0)
+            .testKey(MAIN_SCREEN)
+            .buildWithLayout();
   }
 }

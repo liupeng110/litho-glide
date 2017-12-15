@@ -28,9 +28,7 @@ import static com.facebook.litho.annotations.ResType.STRING;
 public class TitleComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
-      ComponentContext c,
-      @Prop(resType = STRING) String title) {
+  static ComponentLayout onCreateLayout(ComponentContext c,@Prop(resType = STRING) String title) {
     return Text.create(c)
         .text(title)
         .textStyle(BOLD)

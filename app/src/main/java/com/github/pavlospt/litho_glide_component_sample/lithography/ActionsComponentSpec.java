@@ -24,8 +24,7 @@ import com.facebook.yoga.YogaPositionType;
 public class ActionsComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
-      ComponentContext c) {
+  static ComponentLayout onCreateLayout(ComponentContext c) {
     return Row.create(c)
         .backgroundColor(0xDDFFFFFF)
         .positionType(YogaPositionType.ABSOLUTE)

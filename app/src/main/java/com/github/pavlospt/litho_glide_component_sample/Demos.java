@@ -27,9 +27,7 @@ import java.util.Map;
 public final class Demos {
 
   private static Map<String, Component<?>> demoModels;
-
-  private Demos() {
-  }
+  private Demos() {  }
 
   public static void initialize(Context context) {
     final ComponentContext c = new ComponentContext(context);

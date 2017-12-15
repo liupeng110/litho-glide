@@ -5,10 +5,8 @@ import com.facebook.soloader.SoLoader;
 
 public class LithoGlideSampleApp extends Application {
 
-  @Override
-  public void onCreate() {
+  @Override public void onCreate() {
     super.onCreate();
-
     SoLoader.init(this, false);
   }
 }

@@ -21,8 +21,7 @@ import com.facebook.litho.widget.RecyclerBinder;
 public class FeedItemComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist,
-      @Prop final RecyclerBinder binder) {
+  static ComponentLayout onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist,@Prop final RecyclerBinder binder) {
     return Column.create(c)
         .child(Column.create(c)
             .child(artist.getImages().length == 1 ? getImageComponent(c, artist)
@@ -33,14 +32,12 @@ public class FeedItemComponentSpec {
         .build();
   }
 
-  private static ComponentLayout.Builder getImageComponent(ComponentContext c,
-      ArtistDatum artistDatum) {
+  private static ComponentLayout.Builder getImageComponent(ComponentContext c,ArtistDatum artistDatum) {
     String imageUrl = artistDatum.getImages()[0];
     return GlideSingleImageComponent.create(c).image(imageUrl).aspectRatio(2).withLayout();
   }
 
-  private static ComponentLayout.Builder getRecyclerComponent(ComponentContext c,
-      RecyclerBinder binder) {
+  private static ComponentLayout.Builder getRecyclerComponent(ComponentContext c,RecyclerBinder binder) {
     return Recycler.create(c).binder(binder).withLayout().flexShrink(0).aspectRatio(2);
   }
 }

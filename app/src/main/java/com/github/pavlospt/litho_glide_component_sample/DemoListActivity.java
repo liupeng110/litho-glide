@@ -19,13 +19,9 @@ public class DemoListActivity extends AppCompatActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
     Demos.initialize(this);
+    setContentView(LithoView.create(this,DemoListComponent.create(new ComponentContext(this)).build()));
 
-    setContentView(
-        LithoView.create(
-            this,
-            DemoListComponent.create(new ComponentContext(this))
-                .build()));
+
   }
 }
